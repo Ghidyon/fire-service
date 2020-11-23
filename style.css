@@ -219,3 +219,10 @@ input {
         width: 700px;
     }
 }
+/* 
+@media screen and (min-width:1440px) {
+    .container {
+        width: 1440px;
+        margin: 0 auto;
+    }
+} */

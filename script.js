@@ -67,11 +67,13 @@ const getNumbers = async searchValue => {
         container.style.textAlign = "center";
     }
 
+    // Set media query when there is only one match
+
     const deviceWidth = window.matchMedia('(min-width: 700px)');
 
     const changeWidth = width => {
         if (width.matches) { //if media query matches
-            container.style.width = "300px";
+            container.style.width = "350px";
         }
     }
 
