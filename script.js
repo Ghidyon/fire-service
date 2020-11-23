@@ -61,7 +61,8 @@ const getNumbers = async searchValue => {
                         <p>${name}</p>
                     </div>`;
     })
-    displayNumbers(output);
+    document.querySelector('.stations').innerHTML = output;
+    loader.style.visibility = "hidden";
 
     if (stationMatches.length === 0) {
         container.innerHTML = "<h3>No Matches Found</h3>";
