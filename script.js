@@ -38,7 +38,7 @@ const loadNumbers = async () => {
 }
 
 
-const displayNumbers = (output) => {
-    document.querySelector('.stations').innerHTML = output;
+const displayNumbers = (display) => {
+    document.querySelector('.stations').innerHTML = display;
     loader.style.visibility = "hidden";
 }
