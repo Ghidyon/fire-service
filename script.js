@@ -26,7 +26,8 @@ const loadNumbers = async () => {
                             <p>${name}</p>
                         </div>`;
         })
-        displayNumbers(output);
+        document.querySelector('.stations').innerHTML = output;
+        loader.style.visibility = "hidden";
     }
     catch (error) {
         const errorMessage = `<img src="images/icon-error.svg">
