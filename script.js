@@ -1,11 +1,9 @@
 const search = document.querySelector('#search');
 const loader = document.querySelector('.loader');
 const err = document.querySelector('.error');
+const container = document.querySelector('.stations');
 
-window.onload = () => {
-    console.log("Hello")
-    loadNumbers();
-}
+window.onload = () => loadNumbers();
 
 const loadNumbers = async () => {
     loader.style.visibility = "visible";
@@ -63,6 +61,28 @@ const getNumbers = async searchValue => {
                     </div>`;
     })
     displayNumbers(output);
+
+    if (stationMatches.length === 0) {
+        container.innerHTML = "<h3>No Matches Found</h3>";
+        container.style.textAlign = "center";
+    }
+
+    const deviceWidth = window.matchMedia('(min-width: 700px)');
+
+    const changeWidth = width => {
+        if (width.matches) { //if media query matches
+            container.style.width = "300px";
+        }
+    }
+
+    if (stationMatches.length === 1) {
+        changeWidth(deviceWidth);
+        deviceWidth.addListener(changeWidth);
+    }
+    else {
+        container.style.width = "100%";
+    }
+
 }
 
 search.addEventListener('input', e => getNumbers(search.value));

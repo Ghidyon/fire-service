@@ -25,7 +25,7 @@ nav {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
 }
 
 .brand {
@@ -126,21 +126,6 @@ input {
     text-align: justify;
 }
 
-footer {
-    justify-self: self-end;
-    margin-top: 4rem;
-    margin-bottom: 1rem;
-    font-size: .8rem;
-    padding: .75rem 1rem;
-    border: 1px dotted black;
-    border-radius: 20px;
-}
-
-a {
-    text-decoration: none;
-    color: maroon;
-    font-weight: bold;
-}
 /* Loader */
 
 .loader {
@@ -203,3 +188,34 @@ a {
     }
 }
 
+@media screen and (max-width: 400px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 3rem;
+    }
+
+    nav h1 {
+        align-self: center;
+        margin: 1.5rem 0 .5rem 0;
+    }
+
+    input {
+        padding-left: 2.9rem;
+    }
+
+    input::placeholder {
+        font-size: 13px;
+    }
+
+    .stations {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width:768px) {
+    nav, .input-group {
+        width: 700px;
+    }
+}
