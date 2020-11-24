@@ -36,7 +36,7 @@ const loadNumbers = async () => {
 }
 
 const getNumbers = async searchValue => {
-    const response = await fetch('../numbers.json');
+    const response = await fetch('numbers.json');
     const stations = await response.json();
 
     // Get matches to current text input
