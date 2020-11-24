@@ -111,15 +111,15 @@ input {
     padding: 1rem;
     box-shadow: 4px 4px 8px #b1b1b1,
                 -4px -4px 8px rgb(255, 255, 255);
-    transition: all .2s ease-in;
-}
-
-.station:hover {
-    transform: scale(1.05);
 }
 
 .station div {
     margin-bottom: .5rem;
+}
+
+.station div:hover {
+    transform: scale(1.3);
+    transition: all .2s ease-in;
 }
 
 .station p {
