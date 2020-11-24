@@ -26,8 +26,7 @@ const loadNumbers = async () => {
                             <p>${name}</p>
                         </div>`;
         })
-        document.querySelector('.stations').innerHTML = output;
-        loader.style.visibility = "hidden";
+        displayNumbers(output);
     }
     catch (error) {
         const errorMessage = `<img src="images/icon-error.svg">
@@ -61,8 +60,7 @@ const getNumbers = async searchValue => {
                         <p>${name}</p>
                     </div>`;
     })
-    document.querySelector('.stations').innerHTML = output;
-    loader.style.visibility = "hidden";
+    displayNumbers(output);
 
     if (stationMatches.length === 0) {
         container.innerHTML = "<h3>No Matches Found</h3>";
