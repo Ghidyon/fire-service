@@ -8,7 +8,7 @@ window.onload = () => loadNumbers();
 const loadNumbers = async () => {
     loader.style.visibility = "visible";
     try {
-        const response = await fetch('../numbers.json');
+        const response = await fetch('numbers.json');
         const stations = await response.json();
 
         let output = "";
